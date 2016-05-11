@@ -1,0 +1,10 @@
+How To - Änderungen im Privaten Branch
+
+	- Commit
+	- Haken auf Lokalen MasterBranch
+	- Rechtsklick auf Privaten Branch --> Merge 
+	- OK --> Änderungen werden in den Lokalen MasterBranch übernommen 
+	
+Push der Änderungen in den RemoteBranch 
+
+	- Rechtsklick auf Lokalen MasterBranch --> Push
