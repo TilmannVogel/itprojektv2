@@ -36,7 +36,11 @@ public class ITProjektV2 implements EntryPoint {
 	//Panel zur Darstellung der Navigationsleiste auf der linken Seite 
 	VerticalPanel navPanel = new VerticalPanel();
 	
-	//Das navPanel wird dem div-Element aus der HTML-Hostdatei zugeordnet und erhält somit einen Darstellungsort
+	/*
+	 * Das navPanel wird dem div-Element "Navigator" aus der HTML-Hostdatei zugeordnet.
+	 * Somit erhält es einen Darstellungsort.
+	 */
+	
 	RootPanel.get("Navigator").add(navPanel);
 	
 	//Erzeugen der Buttons
@@ -50,9 +54,10 @@ public class ITProjektV2 implements EntryPoint {
 	navPanel.add(myListButton);
 	
 	
-	/**
+	/*
 	 * ClickHandler für die Buttons hinzufügen. 
-	 * Beim Klick auf die Buttons öffnet sich der jeweilige Showcase (--> Wird als VerticalPanel angezeigt)
+	 * Beim Klick auf die Buttons öffnet sich der jeweilige Showcase 
+	 * (--> Wird als VerticalPanel im Container "Content" angezeigt)
 	 */
 	
 	productButton.addClickHandler(new ClickHandler() {
@@ -62,12 +67,12 @@ public class ITProjektV2 implements EntryPoint {
 			Showcase showcase = new ShowProducts(); 
 			
 			/*
-			 * Die Ausgaben werden dem div-Element "Details" aus der HTML-Datei zugeordnet.
+			 * Die Ausgaben werden dem div-Element "Content" aus der HTML-Datei zugeordnet.
 			 * Bevor ein neuer Showcase dort eingebettet wird, werden sicherheitshalber alle 
 			 * bisherigen Elemente des Elements gelöscht. 
 			 */
-			RootPanel.get("Details").clear();
-	        RootPanel.get("Details").add(showcase);
+			RootPanel.get("Content").clear();
+	        RootPanel.get("Content").add(showcase);
 			}
 		});
 	
@@ -75,8 +80,8 @@ public class ITProjektV2 implements EntryPoint {
 		@Override
 		public void onClick(ClickEvent event) {
 			Showcase showcase = new CreateReport();
-			RootPanel.get("Details").clear();
-	        RootPanel.get("Details").add(showcase);
+			RootPanel.get("Content").clear();
+	        RootPanel.get("Content").add(showcase);
 			}
 		});
 	
@@ -84,8 +89,8 @@ public class ITProjektV2 implements EntryPoint {
 		@Override
 		public void onClick(ClickEvent event) {
 			Showcase showcase = new ShowMyList();
-			RootPanel.get("Details").clear();
-	        RootPanel.get("Details").add(showcase);
+			RootPanel.get("Content").clear();
+	        RootPanel.get("Content").add(showcase);
 			}
 		});
 	
