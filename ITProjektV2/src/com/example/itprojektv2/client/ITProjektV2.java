@@ -33,8 +33,6 @@ public class ITProjektV2 implements EntryPoint {
 	@Override
 	public void onModuleLoad() {
 		    
-		  
-	
 	//Panel zur Darstellung der Navigationsleiste auf der linken Seite 
 	VerticalPanel navPanel = new VerticalPanel();
 	
@@ -43,6 +41,7 @@ public class ITProjektV2 implements EntryPoint {
 	Button reportButton = new Button("Create report");
 	Button myListButton = new Button("My List");
 	
+	//Hinzufügen der Buttons zum VerticalPanel
 	navPanel.add(productButton);
 	navPanel.add(reportButton); 
 	navPanel.add(myListButton);
