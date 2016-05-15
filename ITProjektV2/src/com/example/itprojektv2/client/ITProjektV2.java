@@ -36,6 +36,9 @@ public class ITProjektV2 implements EntryPoint {
 	//Panel zur Darstellung der Navigationsleiste auf der linken Seite 
 	VerticalPanel navPanel = new VerticalPanel();
 	
+	//Das navPanel wird dem div-Element aus der HTML-Hostdatei zugeordnet und erhält somit einen Darstellungsort
+	RootPanel.get("Navigator").add(navPanel);
+	
 	//Erzeugen der Buttons
 	Button productButton = new Button("Products");
 	Button reportButton = new Button("Create report");
@@ -57,6 +60,14 @@ public class ITProjektV2 implements EntryPoint {
 		public void onClick(ClickEvent event) {
 			//Showcase instantiieren
 			Showcase showcase = new ShowProducts(); 
+			
+			/*
+			 * Die Ausgaben werden dem div-Element "Details" aus der HTML-Datei zugeordnet.
+			 * Bevor ein neuer Showcase dort eingebettet wird, werden sicherheitshalber alle 
+			 * bisherigen Elemente des Elements gelöscht. 
+			 */
+			RootPanel.get("Details").clear();
+	        RootPanel.get("Details").add(showcase);
 			}
 		});
 	
@@ -64,6 +75,8 @@ public class ITProjektV2 implements EntryPoint {
 		@Override
 		public void onClick(ClickEvent event) {
 			Showcase showcase = new CreateReport();
+			RootPanel.get("Details").clear();
+	        RootPanel.get("Details").add(showcase);
 			}
 		});
 	
@@ -71,22 +84,13 @@ public class ITProjektV2 implements EntryPoint {
 		@Override
 		public void onClick(ClickEvent event) {
 			Showcase showcase = new ShowMyList();
+			RootPanel.get("Details").clear();
+	        RootPanel.get("Details").add(showcase);
 			}
 		});
 	
 	
-	
-	
-	
-	
-	
-	
-	RootPanel.get().add(navPanel);
-	
-	
-	
-	
-	
+		
 	}
 	}
 	

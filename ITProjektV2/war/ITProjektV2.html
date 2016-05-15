@@ -6,36 +6,39 @@
 
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-    <!--                                                               -->
-    <!-- Consider inlining CSS to reduce the number of requested files -->
-    <!--                                                               -->
-    <link type="text/css" rel="stylesheet" href="ITProjektV2.css">
-
-    <!--                                           -->
-    <!-- Any title is fine                         -->
-    <!--                                           -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">                                                           
+    <link type="text/css" rel="stylesheet" href="ITProjektV2.css">                                  
     <title>Tils&Mirko's Projekt</title>
     
-    <!--                                           -->
-    <!-- This script loads your compiled module.   -->
-    <!-- If you add any GWT meta tags, they must   -->
-    <!-- be added before this line.                -->
-    <!--                                           -->
+    <!-- Startet den Lademechanismus für die GWT - Anwendung -->
     <script type="text/javascript" language="javascript" src="itprojektv2/itprojektv2.nocache.js"></script>
   </head>
 
-  <!--                                           -->
-  <!-- The body can have arbitrary html, or      -->
-  <!-- you can leave the body empty if you want  -->
-  <!-- to create a completely dynamic UI.        -->
-  <!--                                           -->
+                                            
   <body>
 
-    
+	<!-- Dadurch können GWT - Verlaufsfunktionen verwendet werden (OPTIONAL) -->
+	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position: absolute; width: 0; height: 0; border: 0"></iframe>
 
-    <h1>Test</h1>
+	<noscript>
+		<div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+			Your web browser must have JavaScript enabled in order for this application to display correctly.
+		</div>
+	</noscript>
+	
+	<div id="header">
+	<h1>IT-ProjektV2</h1>
+	</div>
+	
+	<!-- Diese Tabelle stellt das Grundgerüst dar. Die beiden Tabellenspalten stellen Container dar, -->
+	<!-- in welche später die Widgets geladen werden (Durch Verwendung der IDs) -->
+	<table>
+		<tr>
+			<td><div id="Navigator"></div></td>
+			<td><div id="Content"></div></td>
+		</tr>	
+	</table>
+	
 
-  </body>
+   </body>
 </html>
