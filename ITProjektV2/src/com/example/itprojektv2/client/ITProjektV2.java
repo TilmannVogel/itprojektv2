@@ -32,15 +32,63 @@ public class ITProjektV2 implements EntryPoint {
 
 	@Override
 	public void onModuleLoad() {
-		    Button b = new Button("Click me", new ClickHandler() {
-		      public void onClick(ClickEvent event) {
-		        Window.alert("Hello, AJAX");
-		      }
-		    });
-
-		    RootPanel.get().add(b);
-		  }
-		
+		    
+		  
+	
+	//Panel zur Darstellung der Navigationsleiste auf der linken Seite 
+	VerticalPanel navPanel = new VerticalPanel();
+	
+	//Erzeugen der Buttons
+	Button productButton = new Button("Products");
+	Button reportButton = new Button("Create report");
+	Button myListButton = new Button("My List");
+	
+	navPanel.add(productButton);
+	navPanel.add(reportButton); 
+	navPanel.add(myListButton);
+	
+	
+	/**
+	 * ClickHandler für die Buttons hinzufügen. 
+	 * Beim Klick auf die Buttons öffnet sich der jeweilige Showcase (--> Wird als VerticalPanel angezeigt)
+	 */
+	
+	productButton.addClickHandler(new ClickHandler() {
+		@Override
+		public void onClick(ClickEvent event) {
+			//Showcase instantiieren
+			Showcase showcase = new ShowProducts(); 
+			}
+		});
+	
+	reportButton.addClickHandler(new ClickHandler() {
+		@Override
+		public void onClick(ClickEvent event) {
+			Showcase showcase = new CreateReport();
+			}
+		});
+	
+	myListButton.addClickHandler(new ClickHandler() {
+		@Override
+		public void onClick(ClickEvent event) {
+			Showcase showcase = new ShowMyList();
+			}
+		});
+	
+	
+	
+	
+	
+	
+	
+	
+	RootPanel.get().add(navPanel);
+	
+	
+	
+	
+	
+	}
 	}
 	
 
